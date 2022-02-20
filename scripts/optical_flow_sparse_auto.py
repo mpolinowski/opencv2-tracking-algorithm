@@ -33,7 +33,7 @@ if not ok:
 # convert to grayscale
 frame_gray_init = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-# Use optical flow to detect object corners / edges from initial frame
+# Use Shi-Tomasi to detect object corners / edges from initial frame
 edges = cv2.goodFeaturesToTrack(frame_gray_init, mask = None, **parameters_shitomasi)
 # [Debug] show amount of found edges
 # max value = maxCorners see above. Reduce qualityLevel to get more hits
